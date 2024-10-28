@@ -89,7 +89,7 @@ public class Player extends GameObject {
     @Override
     public void update() {
         // Update movement state
-        if (isMovingForward) {
+        if (isMovingForward || isMovingBackward || isMovingLeft || isMovingRight) {
             currentState = PlayerState.MOVING;
             updateAnimation(0.016);
         } else {
